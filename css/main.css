@@ -264,6 +264,34 @@ body {
   border-radius: 3px;
   font-size: 1.3rem;
 }
+/* 공지시항 및 자료실  */
+.board {
+  background-color: yellow;
+  margin-top: 20px;
+  position: relative;
+}
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
+  display: none;
+}
+.tab-act .notice-list,
+.tab-act .pds-list,
+.tab-act .notice-more,
+.tab-act .pds-more {
+  display: block;
+}
+.notice-more,
+.pds-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.notice-more::before,
+.pds-more::before {
+  color: hsla(110, 50%, 30%, 1);
+}
 /* 슬로건 */
 .slogan {
   background-color: skyblue;

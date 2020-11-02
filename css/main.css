@@ -266,9 +266,9 @@ body {
 }
 /* 공지시항 및 자료실  */
 .board {
-  background-color: yellow;
   margin-top: 20px;
   position: relative;
+  min-height: 200px;
 }
 .notice-list,
 .pds-list,
@@ -282,11 +282,64 @@ body {
 .tab-act .pds-more {
   display: block;
 }
+
+.tab {
+  /* float: left; */
+  position: absolute;
+  top: 0;
+}
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 73px;
+}
+.tab-act .tab {
+  z-index: 10;
+}
+.tab a {
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  background: #ccc linear-gradient(#ccc, #fff);
+  color: #999;
+}
+.tab-act .tab a {
+  background: #fff;
+  color: #ed552f;
+  border-color: #ed552f #ed552f #fff #ed552f;
+}
+.notice-list,
+.pds-list {
+  padding-top: 45px;
+}
+
+.notice-list li,
+.pds-list li {
+  /* display: flex;
+  flex-flow: row nowrap; */
+  margin-top: 10px;
+}
+.notice-list li *,
+.pds-list li * {
+  vertical-align: middle;
+}
+.notice-list a,
+.pds-list a {
+  display: inline-block;
+  /* flex-grow: 1; */
+  width: calc(100% - 103px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .notice-more,
 .pds-more {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
 }
 .notice-more::before,
 .pds-more::before {

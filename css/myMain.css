@@ -1,0 +1,498 @@
+/* CSS 위에서 아래로 */
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("fontello.css");
+@import url(./reset.css);
+
+/* 숨긴 콘텐츠 */
+/* a11y-hidden은 숨김 컨텐츠 */
+legend, .a11y-hidden {
+    position: absolute;
+    /* background-color: red; */
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+body *,
+body *::before,
+body *::after{
+    box-sizing: border-box;
+}
+/* 루트 요소 */
+html {
+    font-size: 10px;
+}
+
+/* 본문 */
+body {
+    background-color: #ccc;
+    font-family: 'Spoqa Han Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 레이아웃 공통 */
+.header, .visual, .main, .slogan, .footer-inner {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+.header {
+    background-color: #FFFFFF;
+    border-radius: 0 0 15px 15px; /* 모서리 둥글게 */
+    padding: 0 30px 50px;
+    position: relative;
+    /* position이 들어가면 top, bottom, left, right가 적용이 되고 */
+    /* position이 없으면 적용이 되지 않는다. */
+    /* top: 10px;
+    left: 10px; */
+
+}
+
+.logo {
+    background-color: blue;
+    position: absolute;
+    top: 55px;
+    left: 65px;
+    /* right: 0; */
+}
+
+/* 회원 서비스 */
+.member {
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end; */
+    position: relative;
+    right: -10px;
+    text-align: right;
+    /* 2px을 준 이유는 사용성을 위해서 접근성을 위해서 ex> Tab키 이용 */
+    padding: 2px 0;
+    /* li의 공백 문자를 없애는 방법, 0을 만들어서 공백문자를 없앤다 */
+    font-size: 0;
+}
+
+.member li {
+    display: inline-block;
+    /* li의 공백 문자를 없애는 방법,  */
+    font-size: 20px;
+}
+
+.member a {
+    display: inline-block;
+    padding: 8px 10px;
+    /* 텍스트 관련 변환 */
+    text-transform: uppercase;
+}
+
+/* 네비게이션 */
+.navigation {
+    background-color: orange;
+    border-top: 2px solid #000;
+    height: 50px;
+}
+
+/* 비주얼 */
+.visual {
+    background-color: lime;
+}
+
+/* 컨텐츠 */
+.main {
+    background-color: #FFFFFF;
+    border-radius: 15px 15px 0 0;
+    /* padding: 30px; */
+    /* height: 100%; */
+    /* overflow: hidden; */
+    padding: 30px 15px;
+    /* padding: 30px 0px; */
+    min-height: 450px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+
+/* .main::after{
+    display: block;
+    content: "";
+    clear: both;
+} */
+/* 
+.group {
+    float: left;
+    margin: 0 15px;
+} */
+.group1 {
+    width: 250px;
+}
+.group2 {
+    width: 380px;
+}
+.group3 {
+    width: 190px;
+}
+
+/* 로그인 */
+.login {
+    background: radial-gradient(circle at right top, #e8852e, #ed552f);
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.login-heading {
+    /* background-color: pink; */
+    /* 첫 줄 들여쓰기, Block에서만 사용 */
+    text-indent: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ff0;
+    
+}
+
+.login-form {
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 0 10px;
+}
+.login-form fieldset {
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #aaa;
+}
+
+.user-ps {
+    margin-top: 4px;
+}
+
+.login-form label {
+    display: inline-block;
+    /* background-color: lime; */
+    width: 4em;
+}
+
+.login-form input {
+    width: 90px;
+    height: 24px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 0.5em;
+}
+
+.btn-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e8852e;
+    border-radius: 3px;
+    background-color: #ed552f;
+    color: #fff;
+    padding: 0;
+}
+
+.sign {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 10px 10px 10px 10px;
+    font-size: 1.3rem;
+}
+.sign li::before {
+    width: auto;
+    margin-left: 0;
+    color: #ed552f;
+}
+
+.login-form label,
+.login-form input {
+    vertical-align: middle;
+}
+
+/* 유효성 검사 배너 */
+.validation-list {
+    /* background-color: yellow; */
+    margin-top: 20px;
+}
+
+.validation-list a {
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    padding: 6px 10px 8px 45px;
+    margin-top: 10px;
+    /* 배경은 먼저 선언한 것이 앞에 나온다. */
+    background: url(./images/validation_icon.png) no-repeat 20px 50%, linear-gradient(#ccc, #eee);
+}
+
+/* 웹 관련 용어 */
+.term {
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: #ccc linear-gradient(#ccc,#eee)
+}
+
+.term-heading{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.term-list{
+    /* background-color: violet; */
+    margin-top: 10px;
+    /* height: 2 */
+}
+
+.term-list::after {
+    content: "";
+    display: block;
+
+    clear: both;
+}
+
+.term-list-subject {
+    /* background-color: lightgreen; */
+    float: right;
+    width: 145px;
+    /* margin-right: 50px; */
+    /* line-height를 없애기 위해서 사용. */
+    /* line-height: 1; */
+    margin-top: -5px;
+    color: #296897;
+}
+
+.term-list-thumbnail {
+    float: left;
+    /* background-color: yellow; */
+}
+
+.term-list-thumbnail img {
+    /* 기존에 남아있는 배경을 지운다. */
+    vertical-align: top;
+}
+
+.term-list-brief {
+    float: right;
+    width: 145px;
+    /* background-color: aqua; */
+    line-height: 1.5;
+    margin-top: 5px;
+}
+/* 검색 폼 */
+.search {
+    background: #ccc linear-gradient(#ccc, #fff);
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 10px;
+    border: 1px solid #aaa;
+    border-bottom-color: #fff;
+}
+
+.search-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-form label {
+    /* background-color: blue; */
+}
+
+.search-form input {
+    /* background-color: skyblue; */
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    height: 24px;
+    padding: 2px 2px 2px 0.5rem;
+    margin: 0 0.5em;
+    flex-grow: 1;
+}
+
+.btn-search {
+    /* background-color: yellow; */
+    color: #fff;
+    background-color: #333;
+    padding: 0px 10px;
+    height: 24px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+
+/* 공지사항 및 자료실 */
+.board {
+    background-color: yellow;
+    margin-top: 20px;
+    position: relative;
+    min-height: 200px;
+}
+
+.tab {
+    /* float: left; */
+    position: absolute;
+    top: 0;
+}
+.notice-heading {
+    left: 0;
+}
+.pds-heading {
+    left: 80px;
+}
+
+.tab-act .tab {
+     
+}
+
+.tab a {
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    background: #ccc linear-gradient(#ccc, #fff);
+    /* color: #999; */
+}
+
+.tab-act .tab a {
+    background: #fff;
+    color: #ed552f;
+    border-color: #ed552f #ed552f #fff #ed552f;
+}
+
+.notice-list a,
+.pds-list a {
+    display: inline-block;
+    background-color: lightgreen;
+    /* flex-grow: 1; */
+    width: calc(100% - 103px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.notice-list time,
+.pds-list time {
+    background-color: orange;
+}
+
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
+    display: none;
+}
+
+.tab-act .notice-list,
+.tab-act .pds-list,
+.tab-act .notice-more,
+.tab-act .pds-more {
+    display: block;
+}
+
+
+.notice-list li,
+.pds-list li {
+    /* display: flex; */
+    flex-flow: row nowrap;
+    background-color: skyblue;
+    margin-top: 10px;
+}
+
+.notice-list li * 
+.pds-list li * {
+    vertical-align: middle;
+}
+
+.notice-list,
+.pds-list {
+    background-color: pink;
+    position: absolute;
+    /* top: 45px; */
+    padding-top: 45px ;
+    left: 0;
+    width: 100%;
+}
+
+
+.notice-more,
+.pds-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+    /* background-color: pink; */
+}
+
+.notice-more::before,
+.pds-more::before {
+    color: hsla(110, 50%, 50%, 1);
+}
+
+
+/* 뉴스 */
+
+.news {
+    width: 380px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    position: relative;
+}
+.news-heading {
+    background-color: blueviolet;
+}
+.news-article {
+    background-color: lightgreen;
+    padding-left: 130px;
+    position: relative;
+    margin-top: 35px;
+    min-height: 120px;
+}
+.news-article-subject {
+    background-color: red;
+}
+.news-article-date {
+    background-color: brown;
+}
+.news-article-brief {
+    background-color: violet;
+}
+.news-article-thumbnail {
+    background-color: aqua;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+.news-more {
+    background-color: skyblue;
+}
+
+
+
+/* 슬로건 */
+.slogan {
+    background-color: skyblue;
+}
+
+/* 푸터 */
+.footer {
+    background-color: purple;
+}
+.footer-inner {
+    background-color: orange;
+}

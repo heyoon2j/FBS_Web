@@ -98,7 +98,10 @@ button {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cdf9bdf1a4dda2701b53038f0bdfb0e10550da4d
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -122,4 +125,8 @@ ul {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cdf9bdf1a4dda2701b53038f0bdfb0e10550da4d
